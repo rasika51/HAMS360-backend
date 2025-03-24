@@ -102,7 +102,7 @@ def uploaded_file(filename):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
-// Resource Management
+# Resource Management
 @app.route('/api/resources', methods=['GET'])
 def get_resources():
     cursor = mysql.connection.cursor(cursorclass=DictCursor)  # Fix here
